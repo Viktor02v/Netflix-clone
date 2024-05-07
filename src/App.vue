@@ -20,7 +20,7 @@ const { movie, showFullWideo } = storeToRefs(useMovie);
 	<div class="fixed w-full h-screen bg-black">
 		<!-- Sidebar: START -->
 		<div v-if="!showFullWideo" id="SideBar" class="flex z-40 items-center w-[120px] h-screen bg-black relative">
-			N
+			<img class="absolute top-0 w-[35px] mt-10 ml-10" src="/images/netflix-logo.png">
 			<div>
 				<div class="py-2 mx-10 my-6 ">
 					<Magnify fillColor="white" :size="40" class="cursor-pointer" />
