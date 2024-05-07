@@ -9,14 +9,39 @@ import MovieOutline from 'vue-material-design-icons/MovieOutline.vue';
 import Plus from 'vue-material-design-icons/Plus.vue';
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 
-import { useMovieStore } from './stores/movies';
+import { useMovieStore } from './stores/movie';
 import { storeToRefs } from 'pinia';
 const useMovie = useMovieStore();
 const { movie, showFullWideo } = storeToRefs(useMovie);
 </script>
 
 <template>
-	<div>
 
+	<div class="fixed w-full h-screen bg-black">
+		<!-- Sidebar: START -->
+		<div v-if="!showFullWideo" id="SideBar" class="flex z-40 items-center w-[120px] h-screen bg-black relative">
+			N
+			<div>
+				<div class="py-2 mx-10 my-6 ">
+					<Magnify fillColor="white" :size="40" class="cursor-pointer" />
+				</div>
+				<div class="py-2 mx-10 my-6 border-b-4 border-b-red-500">
+					<HomeOutline fillColor="white" :size="40" class="cursor-pointer" />
+				</div>
+				<div class="py-2 mx-10 my-6 ">
+					<TrendingUp fillColor="white" :size="40" class="cursor-pointer" />
+				</div>
+				<div class="py-2 mx-10 my-6 ">
+					<Television fillColor="white" :size="40" class="cursor-pointer" />
+				</div>
+				<div class="py-2 mx-10 my-6 ">
+					<MovieOutline fillColor="white" :size="40" class="cursor-pointer" />
+				</div>
+				<div class="py-2 mx-10 my-6 ">
+					<Plus fillColor="white" :size="40" class="cursor-pointer" />
+				</div>
+			</div>
+		</div>
+		<!-- Sidebar: END -->
 	</div>
 </template>
