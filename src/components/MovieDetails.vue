@@ -22,6 +22,11 @@ defineProps({
 				<span class="pl-4">{{ movie.genre.three }}</span>
 			</div>
 		</div>
-		<div class="text-2xl pt-6">{{ movie.description }}</div>
+		<div class="shadoww text-2xl pt-6">{{ movie.description }}</div>
 	</div>
 </template>
+<style scoped>
+.shadoww {
+	text-shadow: 1px 1px 2px black;
+}
+</style>
